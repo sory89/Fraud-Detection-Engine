@@ -31,9 +31,3 @@ flowchart LR
 
     F --> H
     G --> H
-
-git clone https://github.com/your-repo/fraud-detection-platform.git
-cd fraud-detection-platform
-docker compose up -d
-
-<img width="958" height="475" alt="image" src="https://github.com/user-attachments/assets/91de30bc-1bb9-47a4-b7d4-b0ca962c3f08" />
