@@ -12,44 +12,111 @@ This project simulates a **real-world banking fraud detection system**, capable 
 
 ## 🏗️ Architecture
 
-
----
-
-## 🎯 Version plus détaillée (niveau pro 🔥)
-
-```markdown
-## 🧠 Detailed Architecture
-
 ```mermaid
 flowchart LR
 
-    subgraph Ingestion
-        A[Transaction Generator]
-        B[Kafka Topic: transactions]
-        A --> B
-    end
+    A[Transaction Generator] --> B[Kafka]
 
-    subgraph Processing
-        C[Spark Streaming]
-        D[Fraud Detection Engine]
-        B --> C
-        C --> D
-    end
+    B --> C[Spark Streaming]
 
-    subgraph Storage
-        E[PostgreSQL]
-        C --> E
-    end
+    C --> D[PostgreSQL]
 
-    subgraph Outputs
-        F[Alerts]
-        G[Monitoring Metrics]
-        H[Streamlit Dashboard]
-    end
+    C --> E[Fraud Detection Engine]
 
-    D --> F
-    D --> G
+    E --> F[Alerts System]
 
-    E --> H
+    E --> G[Monitoring]
+
+    D --> H[Streamlit Dashboard]
+
     F --> H
     G --> H
+
+
+---
+
+## ⚙️ Tech Stack
+
+- 🐍 Python  
+- ⚡ Apache Kafka  
+- 🔥 Apache Spark Structured Streaming  
+- 🐘 PostgreSQL  
+- 📊 Streamlit  
+- 🐳 Docker Compose  
+
+---
+
+## 🎯 Features
+
+### 📡 Real-time ingestion
+- Simulated transaction generator
+- Kafka topics:
+  - `transactions`
+  - `fraud_alerts`
+
+### ⚡ Streaming processing
+- Spark Structured Streaming pipeline
+- Window aggregations (1 min / 5 min)
+
+### 🚨 Fraud detection rules
+- High amount transactions  
+- Suspicious IP / location  
+- High-risk country  
+- Burst transactions (rate anomaly)  
+
+### 🧠 Alert system
+- Real-time fraud alerts  
+- Dead Letter Queue (DLQ)  
+- Acknowledgement tracking  
+
+### 📊 Dashboard (Streamlit)
+- Transactions vs fraud rate  
+- Fraud alerts monitoring  
+- Fraud by rule distribution  
+- Pipeline health  
+
+---
+
+## 📊 Dashboard Highlights
+
+- ✅ Live transaction monitoring  
+- 🚨 Fraud alerts (acknowledged / unacknowledged)  
+- 📈 Fraud rate analytics  
+- 🔍 Rule-based breakdown  
+
+---
+
+## 🗄️ Data Model
+
+### `transactions`
+
+| column          | type      |
+|-----------------|----------|
+| transaction_id  | string   |
+| user_id         | string   |
+| amount          | float    |
+| location        | string   |
+| timestamp       | timestamp|
+
+---
+
+### `fraud_alerts`
+
+| column          | type      |
+|-----------------|----------|
+| alert_id        | string   |
+| transaction_id  | string   |
+| rule            | string   |
+| status          | string   |
+| created_at      | timestamp|
+
+---
+
+## 🐳 Run Locally
+
+### 1. Clone repository
+
+```bash
+git clone https://github.com/your-repo/fraud-detection-platform.git
+cd fraud-detection-platform
+docker compose up -d
