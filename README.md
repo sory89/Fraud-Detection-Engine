@@ -1,15 +1,31 @@
 # 🚀 Fraud Detection Streaming Platform
 
-Real-time fraud detection system built with a modern data stack: **Kafka + Spark Structured Streaming + PostgreSQL + Streamlit**.
+<p align="center">
+  <img src="https://img.shields.io/badge/Kafka-Streaming-black?logo=apachekafka">
+  <img src="https://img.shields.io/badge/Spark-Structured%20Streaming-orange?logo=apachespark">
+  <img src="https://img.shields.io/badge/PostgreSQL-Database-blue?logo=postgresql">
+  <img src="https://img.shields.io/badge/Streamlit-Dashboard-red?logo=streamlit">
+  <img src="https://img.shields.io/badge/Docker-Compose-blue?logo=docker">
+</p>
 
-<img width="958" height="475" alt="image" src="https://github.com/user-attachments/assets/1ab40c47-fbbd-4d48-8aae-b1e6ca17ca3c" />
-
+<p align="center">
+  <b>Real-time fraud detection system using Kafka + Spark + PostgreSQL + Streamlit</b>
+</p>
 
 ---
 
-## 📸 Overview
+## 🧠 Overview
 
-This project simulates a **real-world banking fraud detection system**, capable of ingesting, processing, and detecting anomalies in streaming transactions.
+This project simulates a **real-time banking fraud detection system**.
+
+It demonstrates how to:
+
+- ingest streaming transactions  
+- detect fraud in real-time  
+- store and analyze results  
+- visualize insights via dashboard  
+
+👉 Inspired by real-world **fintech / payment systems**
 
 ---
 
@@ -34,6 +50,3 @@ flowchart LR
 
     F --> H
     G --> H
-
-git clone https://github.com/your-repo/fraud-detection-platform.git
-cd fraud-detection-platform
