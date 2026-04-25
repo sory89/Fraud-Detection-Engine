@@ -29,10 +29,16 @@ It demonstrates how to:
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/91de30bc-1bb9-47a4-b7d4-b0ca962c3f08" width="900"/> </p>
 
+
+---
+
+```markdown
+## 🚀 Quick Start
+
+```bash
 git clone https://github.com/your-repo/fraud-detection-platform.git
 cd fraud-detection-platform
 docker compose up -d
-👉 http://localhost:8501
 ---
 
 ## 🏗️ Architecture
