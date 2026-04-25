@@ -40,6 +40,7 @@ git clone https://github.com/your-repo/fraud-detection-platform.git
 cd fraud-detection-platform
 docker compose up -d
 ---
+---
 
 ## 🏗️ Architecture
 
