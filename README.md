@@ -10,26 +10,46 @@ This project simulates a **real-world banking fraud detection system**, capable 
 
 ---
 
-## 🧩 Architecture
-
 ## 🏗️ Architecture
+
+
+---
+
+## 🎯 Version plus détaillée (niveau pro 🔥)
+
+```markdown
+## 🧠 Detailed Architecture
 
 ```mermaid
 flowchart LR
 
-    A[Transaction Generator] --> B[Kafka]
+    subgraph Ingestion
+        A[Transaction Generator]
+        B[Kafka Topic: transactions]
+        A --> B
+    end
 
-    B --> C[Spark Streaming]
+    subgraph Processing
+        C[Spark Streaming]
+        D[Fraud Detection Engine]
+        B --> C
+        C --> D
+    end
 
-    C --> D[PostgreSQL]
+    subgraph Storage
+        E[PostgreSQL]
+        C --> E
+    end
 
-    C --> E[Fraud Detection Engine]
+    subgraph Outputs
+        F[Alerts]
+        G[Monitoring Metrics]
+        H[Streamlit Dashboard]
+    end
 
-    E --> F[Alerts System]
+    D --> F
+    D --> G
 
-    E --> G[Monitoring]
-
-    D --> H[Streamlit Dashboard]
-
+    E --> H
     F --> H
     G --> H
