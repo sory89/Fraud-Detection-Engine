@@ -23,7 +23,7 @@ flowchart LR
 
     C --> E[Fraud Detection Engine]
 
-    E --> F[Alerts System]
+    E --> F[Alerts]
 
     E --> G[Monitoring]
 
