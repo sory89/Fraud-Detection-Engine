@@ -2,6 +2,9 @@
 
 Real-time fraud detection system built with a modern data stack: **Kafka + Spark Structured Streaming + PostgreSQL + Streamlit**.
 
+<img width="958" height="475" alt="image" src="https://github.com/user-attachments/assets/1ab40c47-fbbd-4d48-8aae-b1e6ca17ca3c" />
+
+
 ---
 
 ## 📸 Overview
