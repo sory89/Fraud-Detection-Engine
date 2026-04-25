@@ -10,27 +10,6 @@ This project simulates a **real-world banking fraud detection system**, capable 
 
 ---
 
-## 🏗️ Architecture
-
-```mermaid
-flowchart LR
-
-    A[Transaction Generator] --> B[Kafka]
-
-    B --> C[Spark Streaming]
-
-    C --> D[PostgreSQL]
-
-    C --> E[Fraud Detection Engine]
-
-    E --> F[Alerts System]
-
-    E --> G[Monitoring]
-
-    D --> H[Streamlit Dashboard]
-
-    F --> H
-    G --> H
 
 ## ⚙️ Tech Stack
 
