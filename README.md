@@ -50,3 +50,6 @@ flowchart LR
 
     F --> H
     G --> H
+
+
+<p align="center"> <img src="https://github.com/user-attachments/assets/91de30bc-1bb9-47a4-b7d4-b0ca962c3f08" width="900"/> </p>
