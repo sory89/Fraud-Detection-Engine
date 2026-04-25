@@ -27,8 +27,9 @@ It demonstrates how to:
 
 👉 Inspired by real-world **fintech / payment systems**
 
-<p align="center"> <img src="https://github.com/user-attachments/assets/91de30bc-1bb9-47a4-b7d4-b0ca962c3f08" width="900"/> </p>
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/91de30bc-1bb9-47a4-b7d4-b0ca962c3f08" width="900"/>
+</p>
 
 ---
 
@@ -38,27 +39,3 @@ It demonstrates how to:
 git clone https://github.com/your-repo/fraud-detection-platform.git
 cd fraud-detection-platform
 docker compose up -d
----
-
-## 🏗️ Architecture
-
-```mermaid
-flowchart LR
-
-    A[Transaction Generator] --> B[Kafka]
-
-    B --> C[Spark Streaming]
-
-    C --> D[PostgreSQL]
-
-    C --> E[Fraud Detection Engine]
-
-    E --> F[Alerts]
-
-    E --> G[Monitoring]
-
-    D --> H[Streamlit Dashboard]
-
-    F --> H
-    G --> H
-
