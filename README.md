@@ -32,9 +32,6 @@ flowchart LR
     F --> H
     G --> H
 
-
----
-
 ## ⚙️ Tech Stack
 
 - 🐍 Python  
